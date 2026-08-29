@@ -585,6 +585,8 @@ For field names containing the `.` character, you will need to escape it when re
 ### Behavior with null values or missing fields
 
 Fields with `null` or missing fields in your JSON document will be silently ignored when indexing.
+This also applies to fields mapped as an `object`: a `null` object is ignored rather than
+rejected, along with the subfields it would have contained.
 
 ## Indexing settings
 
